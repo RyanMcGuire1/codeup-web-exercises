@@ -9,12 +9,12 @@ var Hercules = Number(prompt("How many days did you have 'Hercules'?"));
 var PricePerDay = Number(prompt("What is the price of a rental per day?"));
 alert("Your cost is " + (LittleMermaid+BrotherBear+Hercules)*PricePerDay);
 
-var googlePay = prompt("How much does Google pay you per hour?");
-var googleHours = prompt("How many hours did you work for Google?");
-var FacebookPay = prompt("How much does Facebook pay you per hour?");
-var FacebookHours = prompt("How many hours did you work for facebook?");
-var AmazonPay = prompt("How much does Amazon pay you oer hour?");
-var AmazonHours = prompt("How many hours did you work for Amazon?");
+var googlePay = Number(prompt("How much does Google pay you per hour?"));
+var googleHours = Number(prompt("How many hours did you work for Google?"));
+var FacebookPay = Number(prompt("How much does Facebook pay you per hour?"));
+var FacebookHours = Number(prompt("How many hours did you work for facebook?"));
+var AmazonPay = Number(prompt("How much does Amazon pay you oer hour?"));
+var AmazonHours = Number(prompt("How many hours did you work for Amazon?"));
 var TotalPay = alert("Your pay is " + (googlePay*googleHours) + (FacebookPay*FacebookHours) + (AmazonPay*AmazonHours));
 
 var ClassIsNotFull = confirm("Class is not full");
