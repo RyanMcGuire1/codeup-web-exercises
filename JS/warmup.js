@@ -10,4 +10,4 @@ function sayHello(name){
 }
 
 sayHello(name:"Rod");
-sayHello(nmae:"Elvira")
+sayHello(nmae:"Elvira");
