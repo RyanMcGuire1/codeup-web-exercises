@@ -361,18 +361,19 @@ console.log("hello from conditionals lec.js!");
 // }
 
 //TODO: Rewrite the intersection function from earlier as a switch statement.
-function checkIntersection(lightColor){
-    switch(lightColor){
-        case "green":
-            return "keep going";
-        case "yellow":
-            return "Slow Down";
-        case "red";
-        default:
-            return "Proceed";
 
-    }
-}
+// function checkIntersection(lightColor){
+//     switch(lightColor){
+//         case "green":
+//             return "keep going";
+//         case "yellow":
+//             return "Slow Down";
+//         case "red";
+//         default:
+//             return "Proceed";
+//
+//     }
+// }
 
 
 // ================ REVERSE ENGINEERING =================

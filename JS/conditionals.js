@@ -131,8 +131,8 @@
  * price before the discount was, and what their price after the discount is.
  */
  //Generate a random number between 0 and 6
-//var luckyNumber = Math.floor(Math.random() * 6);
-
+// var luckyNumber = Math.floor(Math.random() * 6);
+//
 // var bill = prompt("What is your total bill?");
 // var numberGiven = luckyNumber;
 // alert("Your lucky number is " + numberGiven);
@@ -154,19 +154,35 @@
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-
-var userNumber = confirm("would you like to enter a number?");
-if (userNumber === true) {
-    var number = (prompt("Please enter your number below"));
-    var plusHundred = parseFloat(number) + 100;
-    }else if(userNumber ===NaN){
-        alert("That is not a number!");
+// var userNumber = confirm("would you like to enter a number?");
+//
+//     if (userNumber === true) {
+//     var number = (prompt("Please enter your number below"));
+//     }else if (userNumber % 2 == 0) {
+//     alert(number + " is an even number.");
+//
+//     }else if(userNumber % 2 == !0){
+//     alert(number + " is an odd number.");
+//     }else{
+//     var plusHundred = parseFloat(number) + 100;
+//     alert("Your number plus a hundred" + plusHundred);
+//     }
+function whatNumber(){
+    var userNumber = confirm('Would you like to enter a number?');
+    if(userNumber) {
+        var number = prompt('Please enter your number.');
+        if (isNaN(number)) {
+            alert("that's not a number");
+        } else {
+            var evenOdd = (number % 2 === 0) ? "Your number even." : "your number is odd."
+            var positiveNegative = (number > 0) ? "Your number is positive" : "You number is negative"
+            alert(evenOdd);
+            alert(positiveNegative);
+            alert("Your number plus 100 is " + (parseInt(number) + 100))
+        }
+    }else{
+        alert("Fine then!");
     }
-    else if (number % 2 == 0) {
-        alert(number + " is an even number.");
-    }else if(number % 2 == !0) {
-        alert(number + " is an odd number.");
-    }
+}
 
 
-alert("Your number plus a hundred is " + plusHundred);
