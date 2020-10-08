@@ -27,26 +27,26 @@
 // }
 
 // //#4
-// function numberPyramid(){
-//     var rows = 9;
-//     var emptyString = ' ';
-//     for(var i = 1; i <= 9; i++){
-//         for(var x = 1; x <= i; x++){
-//            emptyString += i + ' ';
-//         }
-//         console.log(emptyString);
-//         emptyString = ' ';
-//     }
-// }
-// numberPyramid()
+function numberPyramid(){
+    var rows = 9;
+    var emptyString = ' ';
+    for(var i = 1; i <= 9; i++){
+        for(var x = 1; x <= i; x++){
+           emptyString += i + ' ';
+        }
+        console.log(emptyString);
+        emptyString = ' ';
+    }
+}
+numberPyramid()
 
 // //#5
-// for(var i = 100; i > 0; i-- ){
-//     if( i % 5 === 0){
-//         console.log(i);
-//     }
-//
-// }
+for(var i = 100; i > 0; i-- ){
+    if( i % 5 === 0){
+        console.log(i);
+    }
+
+ }
 
 
 

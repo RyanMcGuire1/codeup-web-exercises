@@ -184,5 +184,6 @@ function whatNumber(){
         alert("Fine then!");
     }
 }
+whatNumber();
 
 

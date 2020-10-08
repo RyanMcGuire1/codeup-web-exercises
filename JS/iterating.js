@@ -70,7 +70,7 @@
         console.log(array[array.length -2]);
     }
     function last(array) {
-        last([array.length - 1]);
+        console.log(array[array.length -1]);
     }
 
         first([1, 2, 3, 4, 5])

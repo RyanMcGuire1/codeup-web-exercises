@@ -25,13 +25,13 @@
      * string, and <li> tags around each planet.
      */
 
-    var planetsBrokenSting = planetsArray.join("<br>")
-    console.log(planetsBrokenSting);
+    //var planetsBrokenSting = planetsArray.join("<br>")
+    //console.log(planetsBrokenSting);
 
 
      planetsArray.unshift('<ul>');
      planetsArray.push("</ul>");
-     planetsArray.join(" <li> ");
+     var planetsList = planetsArray.join(" <li> ");
     //var planetsEnd = planetsStart.push("</ul>");
     //var planetsList = planetsEnd.join(" <li> ");
 
