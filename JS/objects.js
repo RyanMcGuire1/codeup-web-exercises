@@ -87,20 +87,20 @@
         {title: "Furry Born", author: {firstname:"Clair", lastname: "Legrand"}},
      ];
     console.log(books[0].title);
-    console.log(books[0].author.firstName);
-    console.log(books[0].author.lastName);
+    console.log(books[0].author.firstname);
+    console.log(books[0].author.lastname);
     console.log(books[1].title);
-    console.log(books[1].author.firstName);
-    console.log(books[1].author.lastName);
+    console.log(books[1].author.firstname);
+    console.log(books[1].author.lastname);
     console.log(books[2].title);
-    console.log(books[2].author.firstName);
-    console.log(books[2].author.lastName);
+    console.log(books[2].author.firstname);
+    console.log(books[2].author.lastname);
     console.log(books[3].title);
-    console.log(books[3].author.firstName);
-    console.log(books[3].author.lastName);
+    console.log(books[3].author.firstname);
+    console.log(books[3].author.lastname);
     console.log(books[4].title);
-    console.log(books[4].author.firstName);
-    console.log(books[4].author.lastName);
+    console.log(books[4].author.firstname);
+    console.log(books[4].author.lastname);
 
     /**
      * TODO:
