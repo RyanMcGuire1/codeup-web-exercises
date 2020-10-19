@@ -1,0 +1,17 @@
+.bluefield{
+    /*border: 1px;*/
+    width: 600px;
+    height: 600px;
+    background-color: #514EA5;
+    float:left;
+}
+.whitefield{
+    width:100%;
+    height:300px;
+    background-color: white;
+ }
+.redfield{
+   width:100%;
+    height: 300px;
+    background-color: #b55a78;
+}
