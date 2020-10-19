@@ -1,3 +1,52 @@
 .fancy-header{
-    color: purple;
+    color: darkgreen;
     text-decoration: underline;
+}
+#center{
+    margin: 50px auto;
+    width: 500px;
+    padding: 10px;
+}
+h1,h2{
+    color: blue;
+    text-decoration: underline;
+}
+body{
+    /*background:greenyellow;*/
+    font-family: "Times New Roman", Times, serif;
+    background-image: url("../img/blue-white-background.jpeg");
+    background-size: contain;
+
+}
+ol {
+    list-style-type: upper-roman;
+}
+ul.a{
+    list-style-type: circle;
+}
+ul.b{
+    list-style-type: square;
+}
+th,td{
+border-bottom: 1px solid black;
+}
+tr:hover{background-color: greenyellow}
+tr:nth-child(even){background-color: azure}
+tr:nth-child(odd){background-color: cadetblue; color:aliceblue}
+th{
+    background-color: grey;
+    color: aliceblue;
+}
+a:link{
+    color:black
+}
+a:visited{
+    color: grey;
+}
+a:hover{
+    color: red;
+}
+a:active{
+    color: yellow;
+}
+
