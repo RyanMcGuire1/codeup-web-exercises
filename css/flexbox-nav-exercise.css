@@ -2,5 +2,25 @@ html {
     box-sizing: border-box;
 }
 nav{
-    height: 4.25em
+    height: 4.25em;
+    background-color: lightgrey;
+}
+ul{
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+a:hover{
+    color:blue;
+}
+a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+.logo{
+    font-family: 'Work Sans', sans-serif;
 }
