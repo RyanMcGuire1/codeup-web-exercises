@@ -46,12 +46,14 @@
     $(document).ready(function(){
      "use strict";
         // alert( 'The DOM has finished loading!' );
+        var header = $('h1');
+        alert(header.text());
         $('li').css({
             'font-size': '20px',
             'border': '1px solid red'
         });
-        $('h1').css('border', '1px solid blue')
-        $('p').css('border', '1px solid green')
+        $('h1').css('border', '1px solid blue');
+        $('p').css('border', '1px solid green');
         $('h1, p,li').css('background-color', 'yellow');
 
 
