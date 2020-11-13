@@ -57,7 +57,7 @@ var jimCord = [-98.709698,29.434356]
         .setLngLat(pandaExpressCord)
         .setHTML("<h6>Panda Express</h6>")
 
-    var pandaMark = =new mapboxgl.Marker()
+    var pandaMark = new mapboxgl.Marker()
         .setLngLat(pandaExpressCord)
         .setPopup(pandaPop)
         .addTo(map);

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Exercise</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+<main class = "container">
+<h1>jQuery Selectors Exercise</h1>
+    <br>
+    <h3>Van Halen's Greatest Hits</h3>
+    <ol>
+        <li>Dance the Night Away</li>
+        <li>Don't Tell Me What Love Can Do</li>
+        <li>Panama</li>
+        <li>Dreams</li>
+        <li>Running with the Devil</li>
+    </ol>
+    <br>
+    <div>Some Divyness</div>
+    <br>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis, cupiditate doloremque dolorum facilis fugiat officia quis sit tempore voluptates! Alias amet blanditiis excepturi expedita ipsa nisi perspiciatis repellendus voluptate.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corporis earum eius eveniet facilis harum hic id, inventore iste iure iusto, libero magni modi, mollitia odio ratione reiciendis tenetur vitae.
+    </p>
+
+</main>
+<!--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
+<script src="JS/jquery-2.2.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+    /*
+        1. Wraps code in a function to protect code from global scope
+        2. Wait to run code until the DOM is fully loaded but pictures are loaded up
+     */
+
+    $(document).ready(function(){
+     "use strict";
+        // alert( 'The DOM has finished loading!' );
+        // var header = $('h1');
+        // alert(header.text());
+        // $('li').css({
+        //     'font-size': '20px',
+        //     'border': '1px solid red'
+        // });
+        // $('h1').css('border', '1px solid blue');
+        // $('p').css('border', '1px solid green');
+        // $('h1, p,li').css('background-color', 'yellow');
+
+        $('h1').click(function(e){
+            $('h1').css('background-color','green')
+        });
+
+        $('p').dblclick(function(e){
+            $('p').css('font-size','18px');
+        })
+
+        $('li').hover(function(e) {
+            $('li').css('color', 'red');
+        },function(){
+            $('li').css('color','black');
+        })
+
+
+
+
+
+
+    });
+</script>
+</body>
+</html>
