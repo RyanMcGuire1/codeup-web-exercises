@@ -17,12 +17,42 @@
         $(document).keyup(function (event) {
             console.log(event.keyCode);
         })
-        var konamiKeys = [38,38,40,40,37,39,37,39,66,65,13];
-            for(var i = 0; i > konamiKeys.length; i++){
-             $(document).keydown(function(){
-                 alert("You've added 30 lives!")
-             })
+        var global ={
+
+            konami: function(){
+                var konamiKeys = [38,38,40,40,37,39,37,39,66,65,13],
+                    started = false,
+                    count = 0;
+                $(document).keydown(function(e){
+                    var reset = function(){
+                        started = false;
+                        count = 0;
+                    };
+
+                    var key = e.keyCode;
+
+                    if(!started){
+                        if(key === 38){
+                            started = true;
+                        }
+                    }
+                    if(started){
+                        if(konamiKeys[count] === key){
+                            count++;
+                        } else{
+                            reset();
+                        }
+                        if (count === 11){
+                            alert("You've added 30 more lives");
+                            reset();
+                        }
+                    } else {
+
+                    }
+                });
             }
+        }
+        global.konami();
     });
 
 
