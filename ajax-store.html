@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+</table>
+    <button id="insertProducts">Products Available</button>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function() {
+    "use strict";
+    // TODO: Create an AJAX GET request for the file under data/inventory.json
+    function updatePage() {
+        var inventoryData = $.ajax('data/inventory.json');
+        // TODO: Take the data from inventory.json and append it to the products table
+        inventoryData.done(function (data, status) {
+            console.log(data);
+            console.log(status);
+            buildHTML(data)
+        })
+        inventoryData.fail(function (jqXhr, status, error) {
+            console.log(jqXhr);
+            console.log(status);
+            console.log(error);
+        })
+    }
+            function buildHTML(products){
+               var productsHTML = " ";
+                 productsHTML += "<table>";
+                 productsHTML += "<tr>";
+
+               products.forEach(function(product) {
+                   productsHTML += "<th>" + product.title + "</th>";
+               })
+
+                 productsHTML += "</tr>";
+                 productsHTML += "<tr>";
+
+                 products.forEach(function(product) {
+                     productsHTML += "<td>" + "We have " + product.quantity + " available" + "</td>";
+                 })
+
+                 productsHTML += "</tr>";
+                 productsHTML += "<tr>" ;
+
+                products.forEach(function(product) {
+                    productsHTML += "<td>" + "Only $" + product.price + " each" + "</td>";
+                })
+
+                 productsHTML += "</tr>";
+                 productsHTML += "<tr>" ;
+
+                products.forEach(function(product) {
+                    productsHTML += "<td>" + "Category " + product.categories + "</td>";
+                })
+
+                 productsHTML += "</tr>";
+                 productsHTML += "</table>"
+
+                $('#products').html(productsHTML);
+            }
+    $('#insertProducts').click(updatePage);
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+});
+</script>
+
+</body>
+</html>

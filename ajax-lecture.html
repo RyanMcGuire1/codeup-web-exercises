@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AJAX Lecture</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+<main class="container mt-5">
+    <h1 class="my-5">Intro to AJAX</h1>
+    <form method="GET" action="https://hookb.in/Xk6xMEjQNYSbobmZEyxD">
+        <div class="input-group">
+            <input placeholder="Enter username" class="form-control" type="text" name="username">
+        </div>
+        <button class="btn btn-success my-2">Submit</button>
+    </form>
+    <a href="https://hookb.in/Xk6xMEjQNYSbobmZEyxD?username=test">Some Link</a>
+</main>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.0.min.js"
+        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+
+    $(document).ready(function() {
+
+        "use strict";
+
+        // simple request
+            //make an AJAX request to the Star Wars API
+           // console.log( $.ajax('https://swapi.dev/api/people/1'));
+           //     var jqXhr = $.ajax('https://swapi.dev/api/people/1');
+
+               // $.ajax('https://swapi.dev/api/people/1').done(function(data){
+               //      console.log(data);
+
+
+
+               //      console.log(data['eye_color']);//eye color
+               //     console.log(data.vehicles[0]);
+               // });
+               // $.ajax('https://swapi.dev/api/people/?search=Darth Vader').done(function(data){
+               //     console.log(data);
+               //     console.log(data['eye_color']);
+               // });
+        // $.ajax('data/orders.json').done(function(data){
+        //     console.log(data[1].orderNumber);
+        //     console.log(data[0].orderedBy);
+        //     console.log(data[2].itemOrdered);
+        // })
+
+        // $.ajax('./data/orders.json'); // jQuery request object
+        //
+        // $.ajax("./data/orders.json").done(function(responseData){
+        //     console.log(responseData);
+        // });
+
+        // DOESN'T WORK
+        //     var responseData;
+        //     $.ajax('./data/orders.json').done(function(data) {
+        //         responseData = data;
+        //     }); // .done()
+        //
+        //     console.log(responseData);
+
+        // simple API request
+
+        // $.ajax("https://swapi.dev/api/films").done(function(data){
+        //     console.log(data);
+        // });
+
+
+        // single argument with .done(), .fail() and .always() methods
+
+        // $.ajax({
+        //     "url": "https://swapi.dev/api/films",
+        //     "type": "GET",
+        //     "data": {
+        //         "search": "A New Hope"
+        //     }
+        // }).done(function(data, status, jqXhr) {
+        //     // console.log(status);
+        //     console.log(data);
+        //     console.log("The director of Star Wars: A New Hope is..." + data.results[0].director);
+        // }).fail(function(jqXhr, status, error) {
+        //     console.log("Request failed! " + status);
+        // }).always(function() {
+        //     console.log("Request made.");
+        // });
+
+
+        // Url first argument and configuration object second argument
+
+        // $.ajax("https://swapi.dev/api/films", {
+        //     "type": "GET",
+        //     "data": {
+        //         "search": "A New Hope"
+        //     }
+        // }).done(function(data) {
+        //     console.log("The director of Star Wars: A New Hope is..." + data.results[0].director);
+        // });
+
+
+        // Storing returned jQuery XML HTTP Response object
+
+        // var jqXhr = $.ajax("https://swapi.dev/api/films", {
+        //     "type": "GET",
+        //     "data": {
+        //         "search": "A New Hope"
+        //     }
+        // });
+        //
+        // console.log(jqXhr);
+        //
+        // jqXhr.done(function(data) {
+        //     console.log("The director of Star Wars: A New Hope is..." + data.results[0].director);
+        // });
+
+
+        // GET short-hand method
+
+        // $.get("https://swapi.dev/api/films", {
+        //     "search": "A New Hope"
+        // }).done(function(data) {
+        //     console.log("The director of Star Wars: A New Hope is..." + data.results[0].director);
+        // });
+
+    });
+
+</script>
+
+</body>
+</html>
+144  ajax-wars.html
+@@ -0,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Star Wars Ajax</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style type="text/css">
+
+        body {
+            color: yellow;
+            background-color: black;
+        }
+        h1 {
+            font-size: 4em;
+            background: black;
+            margin-top: 0;
+            padding: 1em;
+        }
+        h3 {
+            font-size: 2.5em;
+            margin-top: 0;
+            padding-top: 0;
+        }
+        h5 {
+            font-size: 1.5em;
+            font-weight: 200;
+        }
+        .invalid {
+            color: red;
+            text-align: left;
+        }
+        .info {
+            font-weight: 600;
+        }
+        #results {
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: flex-start;
+            margin-bottom: 2em;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<header class="container">
+    <h1 class="text-center">Star Wars Ajax Wiki</h1>
+</header>
+
+<main class="container">
+    <div class="" id="results">
+        <!-- AJAX Requests Go Here -->
+    </div>
+    <div class="searchField text-center fixed" id="searchField">
+        <input type="text" class="form-control" id="searchInput" placeholder="Search Star Wars Characters">
+        <button class="goBtn btn btn-success btn-block" id="goBtn">GO!</button>
+    </div>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function() {
+        var base_url = "https://swapi.dev/api/";
+        var infoDisplay = $("#results");
+        var output = ""; // output string
+        var displayOutput = "";
+        var input = $("#searchInput");
+
+        // Converts query input to search-ready string
+        function parseQuery(query) {
+
+            // convert string to array
+            var queryArray = query.split(" ");
+
+            // convert each word to lower case
+            for (var i = 0; i < queryArray.length; i++) {
+                queryArray[i] = queryArray[i].toLowerCase();
+            }
+
+            // return result
+            return queryArray.join("+");
+        }
+
+        // function to append Star Wars API information to the document
+        function displayInfo(result, query) {
+            if (result === undefined || query === "") {
+                infoDisplay.html("<h3 class='invalid'>No Results</h3>");
+            } else {
+                infoDisplay.html("");
+                output = "";
+                displayOutput = "";
+                output += "<h3>" + result.name + "</h3>";
+                output += "<h5>" + "<span class='info'>DOB:</span> " + result.birth_year + "</h5>";
+                output += "<h5>" + "<span class='info'>Gender:</span> " + result.gender + "</h5>";
+                output += "<h5>" + "<span class='info'>Height:</span> " + result.height + " cm" + "</h5>";
+                output += "<h5>" + "<span class='info'>Mass:</span> " + result.mass + " kg" + "</h5>";
+                output += "<h5>" + "<span class='info'>Hair Color:</span> " + result.hair_color + "</h5>";
+                output += "<h5>" + "<span class='info'>Skin Tone:</span> " + result.skin_color + "</h5>";
+                infoDisplay.html(output);
+            }
+        }
+
+        // function to make AJAX GET request to Star Wars API based on input field value
+        function makeRequest(searchType, query) {
+
+            $.get(base_url + searchType, {
+                "search": query
+            }).done(function(data) {
+                console.log(data);
+                var result = data.results[0];
+                console.log(result);
+                displayInfo(result, query);
+            }).fail(function(data, status) {
+                alert(status);
+            });
+
+        };
+
+        // event on go button to make a new request
+        $("#goBtn").click(function() {
+            makeRequest("people", input.val());
+        });
+
+        // event listener on enter key to make the request
+        $(document).keydown(function(event) {
+            if (event.keyCode == 13) {
+                makeRequest("people", input.val());
+            }
+        })
+
+
+    });
+</script>
+
+</body>
+</html>
+17  data/orders.json
+@@ -0,0 +1,17 @@
+[
+{
+"orderNumber": 1,
+"itemOrdered": "Party Shirt",
+"orderedBy": "Johnny"
+},
+{
+"orderNumber": 2,
+"itemOrdered": "Silly Shirt",
+"orderedBy": "Linda"
+},
+{
+"orderNumber": 3,
+"itemOrdered": "Huge Hat",
+"orderedBy": "Ronnie"
+}
+]
