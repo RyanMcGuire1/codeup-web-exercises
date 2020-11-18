@@ -1,13 +1,13 @@
 [
     {
-        "title": "Hammer",
+        "title": "Hammers",
         "quantity": 25,
         "categories": [
             "tool"
         ],
         "price": 20
     }, {
-        "title": "Drill",
+        "title": "Drills",
         "quantity": 5,
         "categories": [
             "tool",
@@ -15,7 +15,7 @@
         ],
         "price": 100
     }, {
-        "title": "Mower",
+        "title": "Mowers",
         "quantity": 5,
         "categories": [
             "tool",

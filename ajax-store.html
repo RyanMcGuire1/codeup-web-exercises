@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Online Store</title>
+    <link rel="stylesheet" href="css/ajax-store.css">
+
 </head>
 <body>
 
@@ -17,7 +19,7 @@
         </tr>
     </thead>
 </table>
-    <button id="insertProducts">Products Available</button>
+    <button id="insertProducts">Available Products</button>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
@@ -41,36 +43,39 @@ $(document).ready(function() {
     }
             function buildHTML(products){
                var productsHTML = " ";
+               //Start Table
                  productsHTML += "<table>";
-                 productsHTML += "<tr>";
 
-               products.forEach(function(product) {
+                 //Row for each title
+                 productsHTML += "<tr>";
+                 products.forEach(function(product) {
                    productsHTML += "<th>" + product.title + "</th>";
                })
+                productsHTML += "</tr>";
 
-                 productsHTML += "</tr>";
+                 //Row for each quantity
                  productsHTML += "<tr>";
-
                  products.forEach(function(product) {
                      productsHTML += "<td>" + "We have " + product.quantity + " available" + "</td>";
                  })
+                productsHTML += "</tr>";
 
-                 productsHTML += "</tr>";
+                 //Row for each price
                  productsHTML += "<tr>" ;
-
-                products.forEach(function(product) {
+                 products.forEach(function(product) {
                     productsHTML += "<td>" + "Only $" + product.price + " each" + "</td>";
                 })
+                productsHTML += "</tr>";
 
-                 productsHTML += "</tr>";
+                 //Row for each category
                  productsHTML += "<tr>" ;
-
-                products.forEach(function(product) {
-                    productsHTML += "<td>" + "Category " + product.categories + "</td>";
+                 products.forEach(function(product) {
+                    productsHTML += "<td>" + "Category: " + product.categories + "</td>";
                 })
+                productsHTML += "</tr>";
 
-                 productsHTML += "</tr>";
-                 productsHTML += "</table>"
+                //End Table
+                productsHTML += "</table>"
 
                 $('#products').html(productsHTML);
             }
