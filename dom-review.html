@@ -27,9 +27,72 @@
         <button id="highlight">Highlight</button>
     </div>
 </div>
+<script src = JS/jquery-2.2.4.js></script>
 <script>
-    'use strict'
-    var userInput = document.getElementById("input")
+        'use strict';
+    $(document).ready(function(){
+        //Allow the user to type in their favorite food into the input and append it to the list once the button is clicked.
+
+        // grab value of button and give it a click function
+        $('#add-to-list').click(function(){
+
+            //grab value of input, put it in a variable.
+            var userInput = $('#input').val();
+
+            //wrap userInput in <li> tags, put it in a variable.
+            var newListItem = "<li>"+ userInput +"</li> "
+
+            //append variable to unordered list
+            $('#favorite-food').append(newListItem);
+        })
+
+        //When the heading 'Change Me' is double clicked, change its background-color to purple.
+
+        //Grab the id of the <h4>Change Me</h4> and give it a double click function
+        $('#change-me').dblclick(function(){
+
+            //the -this- selector applies to the id that has the function. add css for a background-color of purple
+            $(this).css("background-color","purple")
+        })
+
+        //Allow the user to input their cohort name. Once Update button is clicked, the text should should update with the name of the cohort. ex:My Cohort: Jupiter
+
+        //Grab button id and give it a click function
+        $('#change-cohort').click(function(){
+
+            //Grab user input and put it in a variable
+            var cohortInput = $('#cohort-name').val();
+            var newCohort =
+            //Grab id of the <span> of the <h4>My Cohort:</h4> and append the variable to it
+            $('#my-cohort').append(cohortInput);
+        })
+
+        //When 'Highlight' button is clicked, change the back ground color of the cohort name to yellow.
+
+        //Grab the button id and give it a click function
+        $('#highlight').click(function(){
+            $('#my-cohort').css('background-color','yellow')
+        })
+        //Write some JavaScript that changes the background-color of the container to pink after 3 seconds.
+
+        //set amount of time for delay
+        var delay = 3000;
+
+        //make a setTimeout function. Inside function grab the element class and add css to change background-color to pink put the delay variable aftr the function but in the parentheses after a comma
+        var timeoutId = setTimeout(function(){
+            $('.container').css('background-color', 'pink')
+        }, delay);
+
+
+
+
+
+
+
+
+
+    })
+
 
 </script>
 </body>
