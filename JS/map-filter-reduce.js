@@ -52,4 +52,16 @@ const totalYears = users.reduce(function(currentValue,currentNumber){
 },0);
 console.log(totalYears);
 
-const longestEmail = users.reduce
+const longestEmail = stringArray.reduce(function(currentValue,currentNumber){
+        if(currentValue.length > currentNumber.length){
+           currentNumber = currentValue;
+        }
+        return currentNumber;
+},0)
+console.log(longestEmail);
+
+
+const namesList = users.reduce(function(currentValue,currentWord){
+   return ` ${currentValue} ${currentWord.name},`;
+}," ")
+console.log(namesList);
