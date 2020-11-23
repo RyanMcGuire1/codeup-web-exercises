@@ -1,3 +1,4 @@
+"use strict";
 
 const users = [
     {
@@ -65,3 +66,14 @@ const namesList = users.reduce(function(currentValue,currentWord){
    return ` ${currentValue} ${currentWord.name},`;
 }," ")
 console.log(namesList);
+
+//add all languages using reduce
+//convert to set
+//convert set back to array
+
+const allLanguages = users.reduce((accum,curr)=>{
+    return accum.concat(curr.languages);
+}, [])
+const uniqueLanguages = new Set(allLanguages);
+const arrUnique = Array.from(uniqueLanguages);
+console.log(arrUnique);
